@@ -6,6 +6,8 @@ html {
 *::before,
 *::after {
   box-sizing: inherit;
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -16,10 +18,29 @@ body {
   justify-content: space-between;
   min-height: 100vh;
   font-family: sans-serif;
-  overflow: hidden;
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+.group {
+  /* height: 800px; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-columns: repeat(2,200px);
+  grid-template-rows: repeat(5,100px);
+}
+
+.box {
+  /* height: 200px; */
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
